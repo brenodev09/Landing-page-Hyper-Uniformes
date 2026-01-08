@@ -38,3 +38,24 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+const seta = document.querySelector('.seta-subir')
+seta.addEventListener('click', (e) => {
+  e.preventDefault()
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+})
+
+
+const accordions = document.querySelectorAll('.accordion')
+
+accordions.forEach(accordion =>{
+  accordion.addEventListener('click', () => {
+    const repostaAccordion = accordion.querySelector('.resposta-accordion')
+    repostaAccordion.classList.toggle('ativoResposta')
+    accordion.classList.toggle('ativoAccordion')
+  
+  })
+})
