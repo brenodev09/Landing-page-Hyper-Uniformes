@@ -46,6 +46,7 @@
 
 body {
     background: #000000e5;
+    overflow-x: hidden;
 }
 
 header {
@@ -100,31 +101,29 @@ header {
 }
 
 .container-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.125),
-    transparent 60%
-  );
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.125),
+            transparent 60%);
+    pointer-events: none;
 }
 
-.headline{
+.headline {
     margin-top: 6.6rem;
     font-size: 10rem;
     letter-spacing: 10px;
     text-align: center;
     opacity: 33%;
-    
+
 }
 
 .main-hero {
     margin-top: 3rem;
     display: flex;
     /* justify-content: space-between; */
-    gap:2.3rem;
+    gap: 2.3rem;
 
     .infos-main {
         display: flex;
@@ -137,7 +136,7 @@ header {
         }
 
 
-        .btn-hero {
+        .btn-hero, .btn-simulador {
             background: hwb(0 17% 83%);
             border: none;
             border-bottom: 1px solid white;
@@ -158,7 +157,7 @@ header {
                     color: black;
                 }
 
-                img{
+                img {
                     rotate: 20deg;
                 }
             }
@@ -185,51 +184,51 @@ header {
     }
 }
 
-.man-hero{
+.man-hero {
     width: 28rem;
     z-index: 10;
     margin-top: -12.7rem;
     opacity: 0;
 }
 
-.topics{
+.topics {
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
     margin: 6.6rem 10.2rem;
     width: 100%;
 
-    .txt{
+    .txt {
         text-align: center;
         display: flex;
         flex-direction: column;
         width: 100%;
 
-        h1{
+        h1 {
             font-size: 2.8rem;
         }
 
-        p{
+        p {
             font-size: 1.05rem;
             opacity: 75%;
         }
     }
 
-    ul{
+    ul {
         display: flex;
         flex-direction: column;
         gap: .8rem;
 
-        .item-topic{
+        .item-topic {
             display: flex;
             align-items: center;
             gap: .3rem;
 
-            img{
+            img {
                 opacity: 70%;
             }
 
-            p{
+            p {
                 font-size: .9rem;
                 opacity: 70%;
                 transform: skew(-8deg);
@@ -238,7 +237,7 @@ header {
     }
 }
 
-.container-criacao{
+.container-criacao {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,19 +253,19 @@ header {
 }
 
 
-.titulo-sec{
+.titulo-sec {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: .8rem;
 
-    h1{
+    h1 {
         font-size: 4rem;
         letter-spacing: 3px;
     }
 
-    p{
+    p {
         opacity: 80%;
         text-align: center;
         font-size: 1rem;
@@ -275,26 +274,26 @@ header {
 }
 
 
-.topico-passos{
+.topico-passos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .8rem;
 
-    hr{
+    hr {
         width: 5rem;
         border: 1.6px solid white;
     }
 }
 
-.item-passos{
+.item-passos {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: center;
     text-align: center;
 
-    .icon{
+    .icon {
         padding: 1.1rem;
         border-radius: 35%;
         display: flex;
@@ -304,20 +303,178 @@ header {
         width: 4.5rem;
         height: 4.5rem;
 
-        img{
+        img {
             width: 2.6rem;
         }
     }
 
-    .descricao{
-        h1{
+    .descricao {
+        h1 {
             font-size: 1.6rem;
         }
 
-        p{
+        p {
             font-size: .85rem;
             opacity: 80%;
             width: 13.8rem;
         }
+    }
+}
+
+.brake-frases {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 4rem;
+    width: max-content;
+  animation: rolagem 28s linear infinite;
+
+    p {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        opacity: 50%;
+    }
+}
+
+@keyframes rolagem {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.container-simulador{
+    margin-top: 8rem;
+    display: flex;
+    width: 100%;
+    background: url('/img/bg-simulador.png') no-repeat center black;
+    background-size: cover; 
+    padding: 5rem;
+    height: 100vh;
+
+}
+
+
+
+
+.main-contentSimulador{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* margin-left: 4rem; */
+    .txt-sec{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1{
+            font-size:5.5rem;
+            width: 45rem;
+            line-height: 5.3rem;
+            letter-spacing: 3px;
+        }
+
+        p{
+            font-size: 1rem;
+            opacity: 80%;
+            width: 33rem;
+        }
+    }
+
+
+     .btn-simulador {
+            background: hwb(0 17% 83%);
+            border: none;
+            border-bottom: 1px solid white;
+            /* padding: 1rem .4rem; */
+            padding: 1rem;
+            border-radius: .2rem;
+            font-size: 1rem;
+            transition: all .3s ease;
+            width: 14.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: #d9d9d9;
+
+                p {
+                    color: black;
+                }
+
+                img {
+                    rotate: 20deg;
+                }
+            }
+
+            .content-btn {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                width: 100%;
+
+                img {
+                    width: .95rem;
+                    transition: all .3s ease;
+                }
+
+                p {
+                    font-weight: bold;
+
+                }
+            }
+
+
+        }
+}
+
+
+.topicos-simulador{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .topic-item{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        align-items: center;
+        justify-content: center;
+        /* padding: .rem; */
+        width: 7.2rem;
+        height:7.2rem;
+        background: #ffffff15;
+        border-radius: .8rem;
+
+        p{
+            font-size: .85rem;
+            opacity: 90%;
+        }
+    }
+}
+
+.mockup-laptop{
+    display: flex;
+    flex-direction: column;
+    
+
+    .img-laptop{
+        object-fit: cover;
+        width: 36rem;
+        z-index: 10;
+        position: relative;
+        left: 5rem;
+        top:8rem;
+    }
+
+    .img-pilar{
+        width: 45rem;
+        /* height: 20rem */
+        object-fit: contain;
     }
 }
