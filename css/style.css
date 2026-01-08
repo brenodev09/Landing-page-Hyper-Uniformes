@@ -438,6 +438,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 
     .topic-item{
         display: flex;
@@ -468,13 +469,88 @@ header {
         width: 36rem;
         z-index: 10;
         position: relative;
-        left: 5rem;
+        left: 3.5rem;
         top:8rem;
     }
 
     .img-pilar{
-        width: 45rem;
-        /* height: 20rem */
-        object-fit: contain;
+        width: 43rem;
+        height: 14.3rem
+        /* object-fit: contain; */
     }
 }
+
+
+.container-feedbacks{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.carrossel-feedbacks {
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 70px;
+}
+
+.swiper-slide {
+     width: 300px !important;
+    height: 330px !important;
+}
+
+.card-depoimento {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: linear-gradient(190deg, #363636, #2B2B2B);
+    border-radius: 1rem;
+    gap: 2rem;
+    overflow: hidden;
+
+    p {
+        font-size: 1rem;
+        font-weight: 500;
+        opacity: 85%;
+        width: 16rem;
+        margin-left: .8rem;
+    }
+}
+
+.infos-depoimento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    /* margin-bottom: .5rem; */
+
+    h1 {
+        font-size: 1.65rem;
+        -webkit-text-stroke: .3px #000;
+        color: white;
+        margin-bottom: 2.4rem;
+    }
+
+    .img-pessoa{
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 2px solid black;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .aspas {
+        margin-top: -30px;
+        width: 3.5rem;
+    }
+
+}   
