@@ -1,4 +1,6 @@
 
+
+// animações da pagina
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 ScrollSmoother.create({
@@ -17,6 +19,31 @@ gsap.to('.headline', {
     x:20,
     duration:0.9
 })
+
+
+const tl = gsap.timeline({
+  scrollTrigger:{
+    trigger:'.container-simulador',
+    start:'43% center',
+    end:'bottom center',
+    markers:true,
+  }
+})
+
+tl.to('.img-pilar',{
+  y:-30,
+  opacity:1,
+  duration:0.7,
+  })
+
+tl.to('.img-laptop',{
+  x:-30,
+  opacity:1,
+  // duration:1,
+})
+
+
+
 
 
 // script seção depoimentos
